@@ -1,0 +1,6 @@
+{
+  "appId": "mycourse.clone",
+  "appName": "mycourse-clone",
+  "webDir": "build",
+  "bundledWebRuntime": false
+}

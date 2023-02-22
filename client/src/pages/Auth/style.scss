@@ -1,0 +1,45 @@
+.login-modal {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(238, 238, 238, 0.92);
+  width: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    margin-top: 66px;
+    text-align: center;
+  }
+  .login-modal-body {
+    width: 500px;
+    background: #ffffff;
+    height: 100vh;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    p {
+      margin-top: 10px;
+      margin-bottom: 2px;
+    }
+    input {
+      padding: 12px 16px;
+      width: 100%;
+    }
+    button {
+      padding: 12px;
+      margin-top: 15px;
+    }
+  }
+  .login-form-close {
+    float: right;
+    font-size: 36px;
+  }
+}
+
+

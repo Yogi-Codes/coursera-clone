@@ -1,0 +1,51 @@
+.accountMenu {
+  float: right;
+
+  .main-account-menu {
+    height: 45px;
+    background: #2a73cc;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    font-size: 21px;
+    padding: 5px 15px;
+    min-width: 190px;
+    // border-radius: 6px 6px 0px 0px;
+    border-radius: 4px;
+    margin-top: -10px;
+  }
+
+  .dropdown-account-menu-right {
+    display: none;
+  }
+  .menu-bar-right-side {
+    display: inline-block;
+    z-index: 99999;
+  }
+  #root > div.auth-hero.row {
+    z-index: -1;
+  }
+  .menu-bar-right-side:hover > .dropdown-account-menu-right {
+    display: block;
+
+    ul {
+      list-style: none;
+      padding: 10px 0px;
+      margin: 0;
+      background: #fff;
+      text-align: left;
+      box-shadow: 0 0 10px;
+
+      li {
+        padding: 15px 10px;
+        font-size: 16px;
+        text-align: left;
+
+        a {
+          text-align: left;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

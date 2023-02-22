@@ -1,0 +1,261 @@
+.pc-nav .right-menu {
+  display: inline-block !important;
+  padding: 0px !important;
+
+  a {
+    float: right;
+    max-width: 200px !important;
+    min-width: 140px !important;
+    display: flex;
+    margin-right: 10px;
+    padding: 0px !important;
+    line-height: 13px;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-links-right-side span {
+    margin-top: -0px;
+  }
+  #joinforbtn {
+    margin-top: 0px;
+    padding: 13px;
+  }
+}
+
+.my-drop-down-0 {
+  display: none;
+}
+.myExploreBtn {
+  display: flex;
+  min-width: 130px;
+  background: #2a73cc;
+  padding: 10px 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: -0px !important;
+  color: white;
+  max-height: 40px !important;
+  list-style: none;
+  cursor: pointer;
+}
+.my-drop-down-0 {
+  height: 90vh;
+  background: #f8f8f8;
+  position: absolute;
+  top: 0px;
+  z-index: 999;
+  display: none;
+  width: 350px;
+  left: 20;
+  overflow: scroll;
+  color: #000;
+}
+.myExploreBtn:hover {
+  color: white;
+}
+.my-drop-megaMenu {
+  display: none;
+}
+
+.my-drop-megaMenu {
+  height: 90vh;
+  overflow: scroll;
+  width: 1000px;
+  position: absolute;
+  top: 0;
+  // margin-top: 90px;
+  z-index: 999;
+  background: white;
+
+  .mega-close-button {
+    background: #fff;
+    color: #000;
+    border: none;
+    font-size: 29px;
+    position: absolute;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+  }
+}
+.my-drop-down-0 {
+  padding: 0;
+  li {
+    list-style: none;
+    padding: 15px;
+    transition: 0.4s;
+  }
+  li:hover {
+    background: #fff;
+  }
+}
+.my-drop-megaMenu {
+  color: #000;
+}
+.my-drop-down-0 {
+  width: 24%;
+  left: 1%;
+  padding: 10px;
+}
+.my-drop-megaMenu {
+  width: 74%;
+  right: 1%;
+  padding: 10px;
+}
+#search-form {
+  button {
+    margin-left: -7px;
+  }
+}
+.online-degree-btn * {
+  display: inline-block !important;
+}
+.online-degree {
+  z-index: 999 !important;
+  min-height: 30px;
+  height: auto;
+  background: #f8f8f8;
+  width: 270px;
+  display: none !important;
+  position: absolute;
+  top: 60px;
+  transition: 0.4s;
+  padding: 15px 0px;
+  text-align: left !important;
+  align-items: left !important;
+  margin-left: 90px;
+  b {
+    display: flex;
+    color: brown;
+    min-width: 100%;
+    flex-direction: column;
+  }
+  p {
+    display: inline-block;
+    min-width: 100%;
+    font-size: 12px;
+  }
+}
+.online-degree-menu-item {
+  padding: 15px 15px !important;
+  margin-bottom: 10px;
+}
+.online-degree-menu-item:hover > .online-degree-menu-item b {
+  color: black !important;
+}
+
+.online-degree-btn:hover > .online-degree {
+  display: inline-block !important;
+  transition: 0.4s;
+}
+.course-thumb-in-navigation {
+  max-height: 80px;
+  max-width: 100%;
+  padding: 5px;
+}
+.course-thumb-in-navigation-content {
+  margin-top: -10px;
+  font-size: 14px;
+
+  h5 {
+    font-size: 19px;
+  }
+}
+.mega-menu-content h1 {
+  font-size: 29px;
+  margin-left: 15px;
+}
+.mega-menu-content {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 50px;
+}
+.no-post-found-center-text {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.my-drop-down-0 {
+  li:hover {
+    cursor: pointer;
+  }
+}
+.ahref-tag-in-menu {
+  color: unset;
+}
+.my-mobile-nav {
+  display: none;
+}
+
+@media (max-width: 600px) and (min-width: 100px) {
+  .pc-nav {
+    display: none;
+  }
+  .my-mobile-nav {
+    display: block;
+    //
+    top: 0;
+    left: 0;
+    min-width: 100%;
+
+    .col-md-12:nth-child(1) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: larger;
+      padding: 10px 40px;
+      img {
+        height: 70px;
+      }
+    }
+  }
+
+  .my-side-bar {
+    ul {
+      overflow: scroll;
+      max-height:72vh;
+    }
+  }
+
+  .my-side-bar {
+    min-height: 100vh;
+    overflow-y: scroll;
+    top: 0;
+
+    .menu-item-link {
+      padding: 5px 10px;
+      list-style: none;
+    }
+
+    .bottomBar {
+      position: fixed;
+      bottom: 0;
+      background: #eee;
+      width: 96%;
+      padding: 15px;
+      box-shadow: 0 10px 15px 20px #eee;
+
+      a:nth-child(1) {
+        min-width: 100%;
+        background: #2a73cc;
+        width: 100%;
+        display: inline-block;
+        padding: 10px 15px;
+        color: white;
+        text-align: center;
+        border: 2px solid #2a73cc;
+      }
+      a:nth-child(2) {
+        min-width: 100%;
+        width: 100%;
+        display: inline-block;
+        padding: 10px 15px;
+        color: #2a73cc;
+        text-align: center;
+        border: 2px solid #2a73cc;
+        margin-top: 10px;
+      }
+    }
+  }
+}

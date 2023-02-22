@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.42a13bdf.css",
+    "main.js": "/static/js/main.8ad5933a.js",
+    "static/media/learner-header-image-4x.png": "/static/media/learner-header-image-4x.104ab12bfbec11166645.png",
+    "static/media/robot-girl.jpg": "/static/media/robot-girl.9360100caca34869374f.jpg",
+    "static/media/andrewng.png": "/static/media/andrewng.e17c76df4f88605265ae.png",
+    "static/media/loading.gif": "/static/media/loading.a1a996746e5e48352c81.gif",
+    "static/media/promoStat.png": "/static/media/promoStat.fbd48da3813185d869ef.png",
+    "static/media/quizCompletion.png": "/static/media/quizCompletion.dd1da0cd3e1bf2b4fa3a.png",
+    "static/media/secondary-consumer-hero-img.png": "/static/media/secondary-consumer-hero-img.e62cfcde9ec1cb6f3318.png",
+    "static/media/account_bg_black2.png": "/static/media/account_bg_black2.aab87e6120ee1f6da3a7.png",
+    "static/media/playstore.png": "/static/media/playstore.047a21333a9912ccdb99.png",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/index.html",
+    "main.42a13bdf.css.map": "/static/css/main.42a13bdf.css.map",
+    "main.8ad5933a.js.map": "/static/js/main.8ad5933a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42a13bdf.css",
+    "static/js/main.8ad5933a.js"
+  ]
+}

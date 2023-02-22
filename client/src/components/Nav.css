@@ -1,0 +1,46 @@
+.pc-nav {
+    padding: 20px 5px; 
+    box-shadow: 0 0px 2px; 
+    height: 90px;
+} 
+#search-form input {
+    width: 230px;
+} 
+.pc-nav {
+    display: flex; 
+}
+.pc-nav img { 
+    margin-top: -15px
+} 
+ 
+#search-form {
+    flex: 1;
+}
+.pc-nav > a {
+    flex: 0.1; 
+    margin: 5px 10px; 
+}
+#joinforbtn {
+    width: 120px;
+    text-align: center; 
+}
+ .pc-nav .right-menu {
+     width: 50%; 
+ }
+ 
+.pc-nav .right-menu a {
+    padding-top: 10px!important;
+}
+.menu-links-right-side {
+    color: #333; 
+    font-size: 14px;
+    margin-top: 0px;
+    padding: 5px 20px; 
+    height: 40px;  
+    display: inline-block; 
+    float: right; 
+    min-width: 30%; 
+}
+.loginScreen .col-md-4 {
+    margin-top: 50px
+}

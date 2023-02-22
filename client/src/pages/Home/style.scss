@@ -1,0 +1,173 @@
+.auth-hero {
+  background: #ebf3ff;
+  height: 350px;
+}
+.auth-hero {
+  .container {
+    width: 90%;
+    margin: auto;
+
+    .welcome-div-1 {
+      background: #fff;
+      padding: 10px;
+
+      input {
+        border: none;
+        border-bottom: 1px solid rgba(75, 73, 73, 0.73);
+        width: 100%;
+        padding: 7px 15px;
+      }
+      input:active,
+      input:focus {
+        border: none;
+        border-bottom: 1px solid lightgreen;
+      }
+    }
+    button {
+      background: transparent;
+      color: blue;
+      font-weight: bold;
+      border: none;
+    }
+    button:hover,
+    button:active,
+    button:focus {
+      cursor: pointer !important;
+      border: none !important;
+    }
+  }
+}
+
+.welcome-div-1 .row {
+  padding: 25px;
+  font-size: 14px;
+  p {
+    line-height: 15px;
+    font-size: 14px;
+  }
+  .fs-19 {
+    font-size: 19px;
+    font-weight: bold;
+  }
+}
+.sidebar-of-hero-inner-text {
+  border-left: 1px solid #eee;
+}
+.sidebar-of-hero-inner-text {
+  a {
+    border: 2px solid transparent;
+    padding: 5px;
+  }
+  a:hover {
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 4px;
+  }
+}
+
+.hero-second-welcome-box {
+  margin-left: 30px;
+  padding: 15px;
+}
+
+.welcome-div-1 {
+  padding: 20px !important;
+}
+
+.tab-section {
+  .tabs {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    li {
+      padding: 15px 15px 5px;
+      margin-left: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      border-bottom: 5px solid transparent;
+    }
+    li:hover {
+      border-bottom: 5px solid blue;
+    }
+    .active {
+      border-bottom: 5px solid blue;
+    }
+  }
+
+  .tab-contents {
+    background: #f4f6f7;
+  }
+}
+
+.tab-contents {
+  .courses-list {
+    ul {
+      list-style: none;
+      li {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+.course-card-home {
+  background: white;
+  border-radius: 6px;
+  padding: 15px;
+
+  img {
+    border-radius: 6px;
+  }
+}
+
+.course-small-photo-100 {
+  height: auto;
+  width: 100%;
+}
+.tab-section .tab-contents {
+  .progress {
+    height: 10px;
+    margin-top: 10px;
+  }
+  .sma-text {
+    color: grey;
+  }
+}
+.course-inner-list-card-left {
+  border-right: 2px solid #eee;
+}
+.custom-flex-box a,
+.custom-flex-box i {
+  font-size: 21px;
+}
+.custom-flex-box a {
+  padding: 0px;
+}
+.custom-flex-box .sma-text {
+  margin: 10px;
+  padding: 0px;
+  width: auto;
+  float: left;
+}
+
+.more-box-options {
+  height: 250px;
+  width: 250px;
+  background: red;
+  right: 150px;
+  top: 160px;
+  z-index: 99;
+  border-radius: 6px;
+  cursor: pointer;
+  position: absolute;
+}
+.auth-hero .container {
+  display: flex;
+  .welcome-div-1 {
+    margin: 0px;
+    display: flex;
+  }
+  .hero-second-welcome-box {
+    max-width: 30%;
+  }
+}

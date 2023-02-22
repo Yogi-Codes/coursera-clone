@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dashboard": "npm start --prefix admin_dashboard",
+    "dev": "concurrently \" nodemon server \" \" npm run client\" \" npm run dashboard\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "file-type": "^18.2.1",
+    "html-react-parser": "^3.0.9",
+    "mysql": "^2.18.1",
+    "pdf-to-base64": "^1.0.3",
+    "react-helmet": "^6.1.0",
+    "react-youtube": "^10.1.0",
+    "styled-components": "^5.3.6"
+  }
+}

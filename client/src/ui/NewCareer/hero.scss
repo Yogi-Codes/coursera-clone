@@ -1,0 +1,54 @@
+.banner-section {
+  max-height: 400px;
+  overflow: hidden;
+
+  .col-md-7 {
+    padding: 75px;
+
+    h3 {
+      font-weight: bold;
+      font-size: 36px;
+    }
+    p {
+      font-size: 19px;
+      margin-top: 20px;
+    }
+    .flex-texts {
+      display: flex;
+      max-width: 100%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .flex-texts .flex-1,
+    .flex-texts .flex-2,
+    .flex-texts .flex-3 {
+      min-width: 20%;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 2px 15px;
+    }
+    .flex-texts .flex-1,
+    .flex-texts .flex-2 {
+      border-right: 5px solid rgb(15, 15, 126);
+    }
+    .explor-btn {
+      padding: 15px 20px;
+      height: 50px;
+      background: #2a73cc;
+      color: white;
+      border-radius: 6px;
+      margin-left: 10px;
+    }
+  }
+
+  .col-md-5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // overflow: hidden;
+
+    img {
+      max-height: 430px;
+    }
+  }
+}

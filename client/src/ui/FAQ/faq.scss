@@ -1,0 +1,27 @@
+.faq-post-card {
+    border: 1px solid #eee;
+    padding: 25px; 
+    border-radius: 4px;
+    cursor: pointer;
+    
+    .col-md-1 {
+        font-size: 29px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center; 
+    }
+    .col-md-10 {
+        p {
+            margin-top: 10px;
+        }
+    }
+} 
+
+.faq-section .faq-post-card .right-box p {
+    display: none; 
+}
+
+.faq-section .faq-post-card .right-box p.active {
+    display: block;  
+}

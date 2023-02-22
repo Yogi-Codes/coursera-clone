@@ -1,0 +1,48 @@
+.profile-page-div {
+  background: url("/images/bg/account_bg_black2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+}
+.overflow-top-account-page {
+  min-height: 250px;
+  width: 80%;
+  margin-left: 10%;
+  background: #fff;
+  box-shadow: 0 6px 5px #eee;
+  padding: 80px 25px;
+  margin-top: -150px;
+  border-radius: 5px;
+  margin-bottom: 60px;
+}
+.my-center-account-info {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+}
+.user-icon {
+  margin-top: 36px;
+  i {
+    font-size: 46px;
+    border: 1px solid;
+    padding: 30px;
+    border-radius: 50%;
+    margin-bottom: 70px;
+    background: #B0E5FB;
+  }
+
+  h4 {
+    margin-top: 56px;
+  }
+}
+
+.overflow-top-account-page {
+    .col-md-1 {
+        text-align: right; 
+        font-size: 36px; 
+        color: #a29e9e; 
+    } 
+}

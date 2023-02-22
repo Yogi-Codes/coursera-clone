@@ -1,0 +1,215 @@
+.towards-section {
+  background: #eee;
+  .card-title {
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
+  .col-md-12 p {
+    margin-top: -20px;
+    font-size: 19px;
+  }
+  .flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 100%;
+    margin-bottom: 20px;
+
+    img {
+      margin: 10px 15px;
+    }
+  }
+}
+
+.row-towards-section {
+  display: inline;
+  min-width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  line-height: 25px;
+  padding: 5px;
+}
+.row-towards-section i {
+  font-size: 46px;
+  margin: 10px;
+}
+.row-towards-section .col-md-3 {
+  background: #fff;
+  min-width: 31%;
+  border-radius: 4px;
+  padding: 25px;
+  text-align: center;
+  margin: 1%;
+
+  p {
+    font-size: 14px;
+  }
+}
+
+// Career box
+.career-box {
+  padding: 25px;
+}
+
+.flex-box {
+  display: inline-flex;
+  min-width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.flex-box button {
+  margin: 5px;
+  border-radius: 20px;
+  background: transparent;
+  padding: 2px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+//// course - career
+///
+.course-card {
+  min-height: 450px;
+  background: #fff;
+  margin: 1%;
+  min-width: 31%;
+  border-radius: 6px;
+  box-shadow: 0 0 5px #d9d9d9;
+}
+
+.courses-3-divs {
+  padding: 10px 50px;
+}
+.course-card {
+  padding: 0px;
+
+  .thumb {
+    width: 100%;
+
+    img {
+      height: 100%;
+      max-width: 100%;
+      border-radius: 6px 6px 0 0;
+    }
+  }
+
+  .desc {
+    padding: 10px;
+    p {
+      font-size: 17px;
+    }
+
+    .course-link {
+      font-size: 2rem;
+      color: #333;
+    }
+    .tags {
+      background: rgb(224, 221, 221);
+      padding: 2px 5px;
+      font-size: 13px;
+      margin-right: 5px;
+      border-radius: 4px;
+    }
+  }
+}
+
+.flex-in-post-card {
+  padding: 10px;
+
+  .col-md-10 {
+    margin-top: 5px;
+    a {
+      font-size: 14px;
+    }
+  }
+  img {
+    height: 40px;
+    width: 40px;
+    box-shadow: 0 0 5px #eee;
+    padding: 5px;
+    border-radius: 6px;
+  }
+}
+
+.career-page-p-tag-text {
+  padding: 15px;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+
+.testimonial-section {
+  overflow: hidden!important
+}
+.certificate-section .row .col-md-6:nth-child(1) {
+  display: flex; 
+  align-items: center; 
+  justify-content: center
+}
+.testimonial-section .container.container {
+  overflow: hidden
+}
+
+@media (max-width: 600px) and (min-width: 100px) {
+  .banner-section {
+    margin: 50px 0px;
+    display: inline-block;
+    min-height: 50vh;
+    max-height: 100vh;
+    height: auto;
+    .row {
+      margin: 0;
+    }
+    .col-md-5 {
+      max-width: 100%;
+      margin-top: 50px;
+      height: 290px;
+      overflow: hidden;
+    }
+    .col-md-7 {
+      display: inline-block;
+      padding: 15px;
+      height: auto;
+      min-height: 100px;
+      max-height: auto;
+    }
+  }
+
+  .towards-section {
+    .flex-box {
+      width: 100%;
+      min-width: 40%;
+      float: left;
+      display: inline-block;
+
+      img {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .career-box {
+    .flex-box {
+      display: inline-block;
+    }
+  }
+  img {
+    max-width: 94%;
+  }
+  .courses-3-divs {
+    padding: 10px;
+
+    .course-card {
+      margin-bottom: 15px;
+      padding: 5px;
+    }
+  }
+
+  .testimonial-section .container.container {
+    min-width: 100%;
+    padding: 0px;
+  }
+}

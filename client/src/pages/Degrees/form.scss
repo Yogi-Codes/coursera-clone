@@ -1,0 +1,77 @@
+.hero-form-banner {
+    background: #2A73CC; 
+    min-height: 350px;
+    height: auto;
+    color: white; 
+    padding: 15px;
+}
+.hero-form-banner {
+    form {
+        background: #fff;
+        padding: 15px; 
+        border-radius: 8px;
+        
+        p {
+            margin-top: 15px;
+            margin-bottom: 3px; 
+            color: #333;
+        }
+        select {
+            padding: 5px 15px;
+            width: 100%;
+        }
+    }
+    
+    .col-md-8 {
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        
+        
+        h2 {
+            font-weight: bold; 
+        }
+    }
+}
+
+//  / /// /// 
+.align-content-center {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+.find-online-degree {
+    .card { 
+        margin: 1%;
+        padding: 15px;
+        box-shadow: 0 2px 3px
+    }
+}
+.degree-universities {
+    padding: 50px 150px;
+}
+.degree-universities {
+    .col-md-6 {
+        margin-bottom: 25px;
+    }
+}
+
+
+//  Programs 
+.explore-by-category {
+    padding: 50px 150px;
+    
+    .col-md-6 { 
+        padding: 25px;
+        text-align: center; 
+        
+        .category-card {
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            background-position: center; 
+            padding: 25px; 
+            text-align: center; 
+            border-radius: 6px;
+        }
+    }
+}
