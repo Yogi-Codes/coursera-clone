@@ -208,16 +208,47 @@ const Quiz = () => {
             <Button type="submit"  onClick={sendAns}  >Next</Button>
           </form>
       ) : (
-      <div>
+      <div >
         <h1>{exams[0].question}</h1>
+
                
       <form action="/" onSubmit={sendPdf}>
-        <input type="file" id="myFile" accept=".pdf" name="filename" 
-        onChange={(e)=>{
-          setFile(e.target.files[0]);
-        }}
-        />
-        <button type="submit" >Submit</button>
+          
+      <label htmlFor="myFile" style={{
+  backgroundColor: "#0056D2",
+  color: "#FFFFFF",
+  padding: "10px 20px",
+  borderRadius: "4px",
+  cursor: "pointer"
+}}>
+  Choose File
+</label>
+<input 
+  type="file" 
+  id="myFile" 
+  accept=".pdf" 
+  name="filename" 
+  onChange={(e) => {
+    setFile(e.target.files[0]);
+  }}
+  style={{
+    display: "none"
+  }}
+/>
+<hr />
+     
+
+<button type="submit" style={{
+  backgroundColor: "#0056D2",
+  color: "#FFFFFF",
+  padding: "10px 20px",
+  borderRadius: "4px",
+  border: "none",
+  cursor: "pointer"
+}}>
+  Submit
+</button>
+
       </form>
 
 

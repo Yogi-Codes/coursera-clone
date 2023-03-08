@@ -137,6 +137,25 @@ const MyMenu = [
       },
     ],
   },
+  {
+    id: 10,
+    title: "Manage Certificates",
+    uri: "/certs/view",
+    icon: "menu-icon las la-users",
+    isMulti: true,
+    children: [
+      {
+        title: "Allocate Certificate",
+        uri: "/certs/allocate",
+        icon: "menu-icon las la-list",
+      },
+      {
+        title: "All Certificate",
+        uri: "/certs/all",
+        icon: "menu-icon las la-list",
+      },
+    ],
+  }
 ];
 
 export default MyMenu;

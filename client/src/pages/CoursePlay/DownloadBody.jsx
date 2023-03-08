@@ -5,7 +5,7 @@ import Cookies from 'universal-cookie'
 import axios from 'axios'
 import Loader from '../../Loader'
 import "./style.scss"
-
+ var pro;
 
 
 const DownloadBody = () => {
@@ -20,7 +20,9 @@ const DownloadBody = () => {
     const [certificate, setCertificate] = useState([])
     const [progressed, setProgressed] = useState(0)
     const [progresstotal, setProgresstotal] = useState(1)
-    const [prog, setProg] = useState(1)
+    const [prog, setProg] = useState(2)
+  
+
     /////////////////////
     // Left sidebar functions 
     const [cMat, setCMat] = useState(1);
@@ -61,17 +63,20 @@ const DownloadBody = () => {
         setProgressed(rsp.data.result)
         setProgresstotal(rsp.data.total_time*60)
         if(((rsp.data.result/(rsp.data.total_time*60))*100).toFixed(2)>99.5)
-      {
+      {    
+
+        pro =100;
 
         setProg(100.00)
       }
       else{
+        pro = ((rsp.data.result/(rsp.data.total_time*60))*100).toFixed(2)
         setProg(((rsp.data.result/(rsp.data.total_time*60))*100).toFixed(2))
 
       }
         
         
-        console.log("Assign success ")
+       
 
       } else {
         console.warn("Problem detected ")
@@ -79,12 +84,55 @@ const DownloadBody = () => {
     } catch (error) {
       console.log("Error caught " + error)
     }
-        
+     setPro();   
    }
    useEffect(() => {
      progress()
    }, [])
-   
+
+
+
+   const setPro = async () => {
+
+    const cookies = new Cookies();
+    const formData5 = new FormData();
+formData5.append('action', 'true');
+formData5.append('course_id', courseId);
+formData5.append('user_id', cookies.get("token"))
+formData5.append('progress',pro);
+
+
+    const rsp = await axios.post(
+        CONST.API_SERVER + "/admin/course/content_transaction/progress",
+        formData5,
+        { "Content-Type": "text/plain" });
+
+        if(rsp.data.status==="success"){
+            
+
+            console.log("progress saved");
+            
+            }
+
+
+         }
+
+
+
+
+
+         useEffect(() => {
+            const interval = setInterval(() => {
+            
+              setPro();
+              console.log("chal");
+             
+              
+            }, 5000);
+        
+            return () => clearInterval(interval);
+          }, []);
+
 
       
   //ANIK
@@ -137,7 +185,8 @@ const DownloadBody = () => {
         const rsp2 = await axios.post(CONST.API_SERVER + '/course/my-course/progress', formData2, {
             'Content-Type': 'text/plain',
         });
-        console.log("Progress ::: " + rsp2.data.result[0].progress)
+       console.log("heya");
+       console.log(rsp2.data.result);
         setTProgress(rsp2.data.result[0].id)
         setCertificate(rsp2.data.result)
     }

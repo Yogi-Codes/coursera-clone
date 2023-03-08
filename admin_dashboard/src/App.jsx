@@ -35,6 +35,8 @@ import Dashboard from "./template/Dashboard/Dashboard";
 import UserAdd from "./users/UserAdd";
 import UsersAll from "./users/UsersAll";
 import UsersTrashed from "./users/UsersTrashed";
+import Cert from "./certs/certsall"
+import AddCert from "./certs/Addcert"
 
 function App() {
   return (
@@ -49,6 +51,12 @@ function App() {
           <ForgotPassword />{" "}
         </Route>
 
+
+        <Route path={"/robots.txt"}>
+          {" "}
+          <ForgotPassword />{" "}
+        </Route>
+
         <ProtectedRoute path={"/"} exact auth={true} component={Dashboard} />
 
         <ProtectedRoute
@@ -56,6 +64,18 @@ function App() {
           exact
           auth={true}
           component={CourseCategory}
+        />
+          <ProtectedRoute
+          path={"/certs/all"}
+          exact
+          auth={true}
+          component={Cert}
+        />
+         <ProtectedRoute
+          path={"/certs/allocate"}
+          exact
+          auth={true}
+          component={AddCert}
         />
         <ProtectedRoute
           path={"/courses/new"}

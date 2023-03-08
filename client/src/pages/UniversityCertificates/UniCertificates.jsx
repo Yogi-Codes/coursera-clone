@@ -57,10 +57,22 @@ const UniCertificates = () => {
         <>
             <div className="row master-track-courses">
                 <div className="selector">
-                    <div className="selection-row">
-                        {category.map((e, i) => <a onClick={() => { setTopic(i); setLoadingCategory(e.title) }} className={topic === i ? 'selection-item-active selection-item' : 'selection-item'}> {e.title} </a>)}
+                {category.map((e, i) => (
+  <a
+    key={i}
+    onClick={() => {
+      setTopic(i);
+      setLoadingCategory(e.title);
+    }}
+    className={topic === i ? "selection-item-active selection-item" : "selection-item"}
+    style={{
+      boxShadow: topic === i ? "0px 2px 4px rgba(0, 0, 0, 0.25)" : "",
+    }}
+  >
+    {e.title}
+  </a>
+))}
 
-                    </div>
                 </div>
                 <div className="col-md-12"><br /><br /></div>
 

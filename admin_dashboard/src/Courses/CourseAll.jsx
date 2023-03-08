@@ -98,7 +98,7 @@ const CourseAll = () => {
                                                         <th> Course name </th>
                                                         <th> Price </th>
                                                         <th> Category </th>
-                                                        {/* <th> Author </th> */}
+                                                        <th> Course Id </th>
                                                         <th> Action </th>
                                                     </tr>
                                                 </thead>
@@ -109,7 +109,7 @@ const CourseAll = () => {
                                                             <td> <a href={"/course/edit/" + course.id}>{course.title}</a>  </td>
                                                             <td> {course.price} Inr. </td>
                                                             <td> {course.category} </td>
-                                                            {/* <td> {course.uid} </td> */}
+                                                            <td> {course.id} </td>
                                                             <td>
                                                                 <a href={"/courses/content-add/" + course.id}> <button className='btn btn-primary'>Add Content </button> </a> &nbsp;
                                                                 <button className='btn btn-danger' onClick={() => { deleteCourse(course.id) }}>Delete Course</button> </td>

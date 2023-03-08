@@ -19,29 +19,29 @@ app.post("/admin/dashboard", (req, res) => {
   con.query(
     "SELECT id FROM `users` WHERE `status`='Active' ",
     function (error, results, fields) {
-      console.log("Students :: " + results.length);
+      
       var students = results.length;
 
       con.query(
         "SELECT id FROM `admin` WHERE `status`='Active' ",
         function (e, r, f) {
-          console.log("Users :: " + r.length);
+          
           var admin = r.length;
 
           con.query(
             "SELECT id FROM `courses` WHERE `status`!='Deleted' ",
             function (e, r, f) {
-              console.log("courses :: " + r.length);
+           
               var courses = r.length;
 
               con.query(
                 "SELECT id FROM `course_category` ",
                 function (e, r, f) {
-                  console.log("courses :: " + r.length);
+              
                   var category = r.length;
 
                   con.query("SELECT id FROM `contacts` ", function (e, r, f) {
-                    console.log("courses :: " + r.length);
+               
                     var contacts = r.length;
                     var result = [
                       {
@@ -161,6 +161,7 @@ console.log(course_id);
     "SELECT * FROM `course_transactions` WHERE `course_id`=? and `user_id`=? and `status`='Active' ",
     [course_id, user_id],
     function (e, r, f) {
+      console.log(r.length);
       if (r.length > 0) {
         res.json({ status: "Success" });
       } else {
@@ -169,6 +170,7 @@ console.log(course_id);
           [course_id, user_id, ndate, time],
           function (error, results, fields) {
             if (error != null) {
+              console.log(error);
               res.json({ status: "Failed" });
             } else {
               res.json({ status: "Success" });
@@ -1053,7 +1055,7 @@ app.post("/admin/users/delete-parmanantly", (req, res) => {
 
 app.post("/admin/students/get", (req, res) => {
   con.query(
-    "SELECT * FROM `users` WHERE `status`='Active' order by id desc ",
+    "SELECT name,email,id FROM `users` WHERE `status`='Active' order by id desc ",
     function (error, results, fields) {
       if (results.length > 0) {
         res.json({ result: results, message: "Success" });
@@ -1063,6 +1065,21 @@ app.post("/admin/students/get", (req, res) => {
     }
   );
 });
+app.post("/admin/courses/getcourse", (req, res) => {
+  const id = req.body.user_id;
+  con.query(
+    `SELECT * FROM \`course_transactions\` WHERE \`status\`='Active' order by id desc `,
+    function (error, results, fields) {
+      if (!error) {
+        res.json({ result: results, status: "success" });
+      } else {
+        console.log(error);
+        res.json({ result: "error" + "", status: "failed" });
+      }
+    }
+  );
+});
+
 app.post("/admin/students/trashed", (req, res) => {
   con.query(
     "SELECT * FROM `users` WHERE `status`!='Active' order by id desc ",
@@ -1367,16 +1384,32 @@ app.post("/admin/exam/add", (req, res) => {
 
 app.post("/admin/exams/get", (req, res) => {
   const action = req.body.action;
-  con.query(
-    "SELECT * FROM `exams` WHERE `status`!='Deleted' order by id desc ",
-    function (error, results, fields) {
-      if (results.length > 0) {
-        res.json({ result: results, message: "Success" });
-      } else {
-        res.json({ result: "error" + "", message: "Failed" });
-      }
+  var student;
+
+  const query1 = `SELECT id, name FROM users`;
+
+  con.query(query1, (err, result) => {
+    if (err) {
+      res.status(500).send({ status: "failure" });
+    } else {
+      student = result;
+      con.query(
+        "SELECT * FROM `exams` WHERE `status`!='Deleted' order by id desc ",
+        function (error, results, fields) {
+          if (results.length > 0) {
+            res.json({ result: results,user:student, message: "Success" });
+          } else {
+            res.json({ result: "error" + "", message: "Failed" });
+          }
+        }
+      );
     }
-  );
+  });
+
+
+
+
+
 });
 
 app.post("/admin/exam/delete", (req, res) => {
@@ -1691,11 +1724,26 @@ app.post('/exam/assessment/get', (req, res) => {
     if (err) {
       res.status(500).send({ status: "failure" });
     } else {
-     
-      res.status(200).send({ status: "success", result: result[0].name });
+      if (result.length === 0) {
+        res.status(404).send({ status: "failure", message: "Course not found" });
+      } else {
+        res.status(200).send({ status: "success", result: result[0].name });
+      }
+    }
+  });
+  
+});
+app.post('/users/get', (req, res) => {
+  const query = `SELECT id, name FROM users`;
+  con.query(query, (err, result) => {
+    if (err) {
+      res.status(500).send({ status: "failure" });
+    } else {
+      res.status(200).send({ status: "success", result: result });
     }
   });
 });
+
 app.post('/exam/assessment/approve', (req, res) => {
   const user_id = req.body.user_id; 
   const course_id = req.body.course_id; 
@@ -1779,6 +1827,58 @@ console.log(assessment);
   
    
  
+});
+app.post('/admin/course/content_transaction/progress', (req, res) => {
+  const user_id = req.body.user_id; 
+  const course_id = req.body.course_id; 
+  const progress = req.body.progress;
+  console.log(progress) 
+ 
+  const query = `UPDATE course_transactions
+  SET progress = ${progress}
+  WHERE user_id = ${user_id}
+    AND course_id = ${course_id};
+  `;
+  con.query(query, (err, result) => {
+    if (err) {
+      res.status(500).send({ status: "failure" });
+    } else {
+      res.status(200).send({ status: "success" });
+    }
+  });
+});
+app.post('/certs/all', (req, res) => {
+ 
+  const query = `SELECT * from  course_transactions 
+  WHERE certificate_uploaded = 'yes'`;
+  con.query(query, (err, result) => {
+    if (err) {
+      res.status(500).send({ status: "failure" });
+    } else {
+      res.status(200).send({ status: "success" , result:result });
+    }
+  });
+});
+app.post('/admin/student/certadd', (req, res) => {
+  const user_id = req.body.uid; 
+  const course_id = req.body.course_id;
+  const file = req.files.file;
+  const name = file.name
+  console.log(name);
+  console.log(course_id);
+  file.mv(`${__dirname}/admin_dashboard/public/uploads/certificates/${(name)}`)
+  const query = `UPDATE course_transactions SET certificate_uploaded = 'Yes', certificate = '${name}' WHERE course_id = ${course_id} AND user_id = ${user_id}`;
+  ;
+
+con.query(query, (err, result) => {
+  if (err) {
+    console.log(err);
+    res.status(500).send({ status: "failure" });
+  } else {
+    res.status(200).send({ status: "success", });
+  }
+});
+
 });
 
 

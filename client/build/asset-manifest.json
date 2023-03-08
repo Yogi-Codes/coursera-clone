@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.42a13bdf.css",
-    "main.js": "/static/js/main.8ad5933a.js",
+    "main.js": "/static/js/main.c921fbc3.js",
     "static/media/learner-header-image-4x.png": "/static/media/learner-header-image-4x.104ab12bfbec11166645.png",
     "static/media/robot-girl.jpg": "/static/media/robot-girl.9360100caca34869374f.jpg",
     "static/media/andrewng.png": "/static/media/andrewng.e17c76df4f88605265ae.png",
@@ -16,10 +16,10 @@
     "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/index.html",
     "main.42a13bdf.css.map": "/static/css/main.42a13bdf.css.map",
-    "main.8ad5933a.js.map": "/static/js/main.8ad5933a.js.map"
+    "main.c921fbc3.js.map": "/static/js/main.c921fbc3.js.map"
   },
   "entrypoints": [
     "static/css/main.42a13bdf.css",
-    "static/js/main.8ad5933a.js"
+    "static/js/main.c921fbc3.js"
   ]
 }

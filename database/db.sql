@@ -243,7 +243,7 @@ INSERT INTO `course_category` (`id`, `title`) VALUES
 --
 
 CREATE TABLE `course_transactions` (
-  `id` int(255) NOT NULL,
+  `id` int(255) NOT NULL AUTO_INCREMENT,
   `course_id` varchar(150) DEFAULT NULL,
   `user_id` varchar(150) DEFAULT NULL,
   `status` varchar(150) DEFAULT NULL,

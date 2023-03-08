@@ -128,6 +128,7 @@ function Nav() {
               height: "100vh",
               position: "absolute",
               marginTop: "50px",
+              zIndex:"-1"
             }}
           >
             <ul
@@ -235,7 +236,7 @@ function Nav() {
                 </a>
                 <a href={"/mastertrack"} className="online-degree-menu-item">
                   {" "}
-                  <b>Master Trick</b> <br />{" "}
+                  <b>Master Track</b> <br />{" "}
                   <p> Earn Credit towards a Master Degree </p>
                 </a>
                 <a

@@ -199,8 +199,8 @@ const CourseLoader = ({ category: categorySent }) => {
                             </div>
                             <h5> <a href={"/course/"+e.category+"/"+e.id+"/"+e.title}>  {e.title}   </a> </h5>
                             <p>
-                               { e.short_description }
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa veniam quasi cupiditate alias eius facere eligendi hic, iure dicta dolor enim in quisquam animi minus quibusdam eos debitis maiores magnam?
+                               { e.description }
+                               
                             </p>
                         </div>)}
                 </div>

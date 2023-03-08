@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { CONST } from "../constant";
 import Footer from "../widgets/Footer";
@@ -16,7 +16,8 @@ const ExamsAll = () => {
   const [pdf,setPdf] = useState();
   const [name, setname] = useState();
   const [namev, setnamev] = useState();
-
+  const [usid, setusid] = useState();
+  const [users, setusers] = useState([]);
 
 
 
@@ -30,7 +31,7 @@ const ExamsAll = () => {
     formData.append("action", "getQuestions");
     formData.append("exam_id", par.id);
     formData.append("course_id", par.course_id);
-    formData.append("user_id", cookies.get("token"));
+    formData.append("user_id",usid);
     const rsp = axios.post(CONST.API_SERVER + "/exam/assessment/approve", formData, {
       "Content-Type": "text/plain",
     });
@@ -45,7 +46,7 @@ const ExamsAll = () => {
     formData.append("action", "getQuestions");
     formData.append("exam_id", par.id);
     formData.append("course_id", par.course_id);
-    formData.append("user_id", cookies.get("token"));
+    formData.append("user_id", usid);
     const rsp = axios.post(CONST.API_SERVER + "/exam/assessment/get", formData, {
       "Content-Type": "text/plain",
     });
@@ -91,6 +92,9 @@ const ExamsAll = () => {
         const ttl = rsp.data.result[0]["title"];
         // console.log("ttl" + ttl);
         setExams(rsp.data.result);
+        console.log(rsp.data.user)
+        console.log("yo");
+        setusers(rsp.data.user)
         setIsLoading(false);
         document.getElementById("select_category").innerHTML = `
                 
@@ -177,7 +181,13 @@ const ExamsAll = () => {
                               <td> {exam.category} </td>
                               {/* <td> {course.uid} </td> */}
                               <td style={{justifyContent:"space-around" , display:"flex"}} >
-                               {exam.etype==="ASSESSMENT"?<span  ><a style={{padding:"0.1vw"}} > 
+                               {exam.etype==="ASSESSMENT"?<span> 
+                                      <a style={{padding:"0.1vw"}} >
+                                      <select onChange={(e)=>{setusid(e.target.value)}} >
+      {users.map(user => (
+        <option key={user.id} value={user.id}>{user.name}</option>
+      ))}
+    </select> 
                                   <button className="btn btn-primary" onClick={()=>{
                                     getpdf(exam)
                                   }} >
